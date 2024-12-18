@@ -1,0 +1,28 @@
+.controls {
+    position: absolute;
+    left: 50%;
+    padding-top: 21px;
+    transform: translateX(-50%);
+    width: 100%;
+
+    .bullets-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .swiper-pagination-bullet {
+            display: block;
+            width: 9px;
+            height: 9px;
+            background-color: #aed3ff;
+            margin: 0 5px;
+            opacity: 1;
+
+            &.swiper-pagination-bullet-active {
+                opacity: 1;
+                background-color: #2d409e;
+            }
+        }
+    }
+}

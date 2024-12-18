@@ -1,0 +1,48 @@
+@import "typography";
+@import "header";
+@import "footer";
+@import "controlsCarousel";
+@import "loader";
+
+.inner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    @media (min-width: $sm) {
+        max-width: 540px;
+    }
+    @media (min-width: $md) {
+        padding: 0;
+        max-width: 720px;
+    }
+    @media (min-width: $lg) {
+        max-width: 960px;
+    }
+    @media (min-width: $xl) {
+        max-width: 1140px;
+    }
+    @media (min-width: $xxl) {
+        max-width: 1440px;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.image {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background: no-repeat center center/cover;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+}

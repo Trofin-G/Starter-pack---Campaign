@@ -1,0 +1,531 @@
+.register {
+    background-color: #204887;
+
+    .content {
+        padding: 20px 0;
+        @media (min-width: $md) {
+            padding: 40px 0;
+        }
+        @media (min-width: $xl) {
+            padding: 80px 0;
+        }
+
+        .inner {
+            h1 {
+                text-align: center;
+                color: $white;
+            }
+
+            h2 {
+                text-align: center;
+                color: $white;
+            }
+
+            form {
+                max-width: 600px;
+                margin: 0 auto;
+
+                .error-messages {
+                    text-align: center;
+
+                    p {
+                        color: $error;
+                    }
+                }
+
+                .group {
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    label {
+                        color: $white;
+                    }
+
+                    input,
+                    select {
+                        background-color: $white;
+                        color: $black;
+                        display: block;
+                        width: 100%;
+                        line-height: 40px;
+                        border-radius: 20px;
+                        padding: 0 20px;
+                    }
+
+                    select {
+                        appearance: none;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+
+                        &::-ms-expand {
+                            display: none;
+                        }
+                    }
+
+                    option {
+                        font-family: $sarabun;
+                        font-weight: 400;
+                        font-size: 18px;
+                        text-transform: none;
+                    }
+
+                    input:-webkit-autofill,
+                    input:-webkit-autofill:hover,
+                    input:-webkit-autofill:focus,
+                    input:-webkit-autofill:active {
+                        -webkit-box-shadow: 0 0 0 45px $white inset !important;
+                        color: $black !important;
+                    }
+
+                    input:-webkit-autofill {
+                        -webkit-text-fill-color: $black !important;
+                    }
+
+                    input {
+                        color: $black !important;
+                        -webkit-text-fill-color: $black !important;
+                        -webkit-background-clip: text !important;
+                        background-clip: text !important;
+                        background: $white !important;
+
+                        &::placeholder {
+                            color: $black !important;
+                            -webkit-text-fill-color: $black !important;
+                            -webkit-background-clip: text !important;
+                            background-clip: text !important;
+                        }
+                    }
+
+                    .info-point {
+                        position: absolute;
+                        z-index: 2;
+
+                        img {
+                            display: block;
+                        }
+                    }
+
+                    // dropdown icon
+                    &:nth-of-type(3) {
+                        .info-point {
+                            right: 20px;
+                            top: 33px;
+
+                            img {
+                                width: 12px;
+                                height: 21px;
+                            }
+                        }
+                    }
+
+                    // info icon
+                    &:nth-of-type(4) {
+                        .info-point {
+                            right: 8px;
+                            top: 33px;
+
+                            img {
+                                width: 23px;
+                                height: 23px;
+                            }
+                        }
+
+                        .receipt-img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            padding: 5px;
+                            background-color: $white;
+                            display: none;
+                            @media (min-width: $xl) {
+                                padding: 5px;
+                                top: 50%;
+                                left: auto;
+                                right: -308px;
+                                transform: translateY(-50%);
+                            }
+                            @media (min-width: 1360px) {
+                                right: -368px;
+                                padding: 10px;
+                            }
+                            @media (min-width: $xxl) {
+                                padding: 14px;
+                                right: -425px;
+                            }
+                            @media (min-width: 1700px) {
+                                right: -507px;
+                            }
+
+                            &:before {
+                                @media (min-width: $xl) {
+                                    content: "";
+                                    display: block;
+                                    background: url("../images/icon-arrow.png") no-repeat center center/32px 38px;
+                                    width: 32px;
+                                    height: 38px;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    left: -32px;
+                                }
+                            }
+
+                            > img {
+                                display: block;
+                                width: 224px;
+                                height: 448px;
+                                @media (min-width: $xl) {
+                                    width: 224px;
+                                    height: 448px;
+                                }
+                                @media (min-width: 1360px) {
+                                    width: 279px;
+                                    height: 584px;
+                                }
+                                @media (min-width: $xxl) {
+                                    width: 289px;
+                                    height: 604px;
+                                }
+                                @media (min-width: 1700px) {
+                                    width: 309px;
+                                    height: 644px;
+                                }
+                            }
+
+                            .close-modal {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                cursor: pointer;
+                                @media (min-width: $xl) {
+                                    top: -13px;
+                                    right: -13px;
+                                }
+                                @media (min-width: 1360px) {
+                                    top: -21px;
+                                    right: -21px;
+                                }
+                                @media (min-width: $xxl) {
+                                    top: -26px;
+                                    right: -26px;
+                                }
+
+                                img {
+                                    display: block;
+                                    height: auto;
+                                    @media (min-width: $xl) {
+                                        width: 32px;
+                                    }
+                                    @media (min-width: 1360px) {
+                                        width: 42px;
+                                    }
+                                    @media (min-width: $xxl) {
+                                        width: 52px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.date-group {
+                        margin-bottom: 14px;
+                        @media (min-width: $md) {
+                            margin: 0 auto 41px auto;
+                        }
+                    }
+
+                    &.error {
+                        margin-bottom: 6px;
+                        @media (min-width: $md) {
+                            margin: 0 auto 21px auto;
+                        }
+
+                        input,
+                        select {
+                            color: $error;
+                            border: 1px solid $error;
+                        }
+
+                        span {
+                            display: block;
+                            color: $error;
+                        }
+
+                        input:-webkit-autofill,
+                        input:-webkit-autofill:hover,
+                        input:-webkit-autofill:focus,
+                        input:-webkit-autofill:active {
+                            -webkit-box-shadow: 0 0 0 45px $white inset !important;
+                            color: $error !important;
+                        }
+
+                        input:-webkit-autofill {
+                            -webkit-text-fill-color: $error !important;
+                        }
+
+                        input {
+                            color: $error !important;
+                            -webkit-text-fill-color: $error !important;
+                            -webkit-background-clip: text !important;
+                            background-clip: text !important;
+                            background: $white !important;
+                        }
+                    }
+
+                    &:nth-of-type(5) {
+                        @media (min-width: $md) {
+                            margin: 0 auto 41px auto;
+                        }
+                    }
+                }
+
+                .group-checkbox {
+                    margin-bottom: 0;
+                    @media (min-width: $md) {
+                        padding-left: 46px;
+                        max-width: 573px;
+                        margin-bottom: 16px;
+                    }
+                    @media (min-width: $xl) {
+                        padding-left: 147px;
+                        max-width: 776px;
+                    }
+
+                    label {
+                        position: relative;
+                        display: inline-block;
+                        cursor: pointer;
+                        color: $white;
+                        font-family: $sarabun;
+                        font-weight: 500;
+                        font-size: 11px;
+                        line-height: 18px;
+                        padding: 0 0 0 26px;
+                        @media (min-width: $md) {
+                            font-size: 18px;
+                            line-height: 20px;
+                            padding-left: 40px;
+                        }
+
+                        @media (min-width: $xl) {
+                        }
+
+                        &:before,
+                        &:after {
+                            content: "";
+                            position: absolute;
+                        }
+
+                        &:before {
+                            background-color: $white;
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 3px;
+                            top: 0;
+                            left: 0;
+                            @media (min-width: $md) {
+                                width: 25px;
+                                height: 25px;
+                                top: -2px;
+                            }
+                        }
+
+                        &:after {
+                            width: 16px;
+                            height: 16px;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                            transition: all 0.3s ease-in-out;
+                            background: url("../images/icon-check.png") no-repeat center center/13px 14px;
+                            @media (min-width: $md) {
+                                width: 25px;
+                                height: 25px;
+                                background-size: 20px 21px;
+                                top: -2px;
+                            }
+                        }
+
+                        a {
+                            color: $secondary;
+                            text-decoration: underline;
+                            font-weight: 900;
+                        }
+                    }
+
+                    input {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        height: 0;
+                        visibility: hidden;
+
+                        &:checked {
+                            ~ label {
+                                &:after {
+                                    opacity: 1;
+                                    transition: all 0.3s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+
+                    &.error {
+                        position: relative;
+                        margin-bottom: 32px;
+                        @media (min-width: $md) {
+                            margin-bottom: 45px;
+                        }
+
+                        label {
+                            &:before {
+                                border: 1px solid $error;
+                            }
+                        }
+
+                        span {
+                            position: absolute;
+                            padding: 25px 0 0 0;
+                            @media (min-width: $md) {
+                                padding: 30px 0 0 0;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(6) {
+                        &.error {
+                            margin-bottom: 22px;
+                            @media (min-width: $md) {
+                                margin-bottom: 45px;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(7) {
+                        &.error {
+                            @media (min-width: 387px) {
+                                margin-bottom: 22px;
+                            }
+                            @media (min-width: $md) {
+                                margin-bottom: 45px;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(8) {
+                        &.error {
+                            margin-bottom: 62px;
+                            @media (min-width: 408px) {
+                                margin-bottom: 50px;
+                            }
+                            @media (min-width: $md) {
+                                margin-bottom: 45px;
+                            }
+
+                            span {
+                                padding: 36px 0 0 0;
+                                @media (min-width: 346px) {
+                                    padding: 25px 0 0 0;
+                                }
+                                @media (min-width: $md) {
+                                    padding: 30px 0 0 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .recaptcha-wrapper {
+                    transform: scale(0.85);
+                    max-width: 304px;
+                    margin: 20px auto 10px auto;
+                    @media (min-width: $md) {
+                        transform: scale(1);
+                        margin: 18px auto 34px auto;
+                    }
+                }
+
+                .group-submit {
+                    position: relative;
+                    max-width: 152px;
+                    margin: 0 auto;
+                    @media (min-width: $md) {
+                        max-width: 216px;
+                    }
+
+                    input {
+                        transition: all 0.3s ease-in-out;
+                        position: relative;
+                        z-index: 2;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                        display: block;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: $tertiary;
+                        font-family: $sarabun;
+                        font-weight: 900;
+                        font-size: 14px;
+                        width: 150px;
+                        height: 50px;
+                        margin: 0 auto;
+                        @media (min-width: $md) {
+                            font-size: 20px;
+                            width: 214px;
+                            height: 60px;
+                        }
+                    }
+
+                    &:before {
+                        transition: all 0.3s ease-in-out;
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        background: red;
+                        width: 164px;
+                        height: 56px;
+                        transform: translate(-50%, -50%);
+                        top: 56%;
+                        left: 50%;
+                        @media (min-width: $md) {
+                            width: 229px;
+                            height: 78px;
+                            top: 59%;
+                        }
+                    }
+
+                    &:hover {
+                        max-width: 162px;
+                        @media (min-width: $md) {
+                            max-width: 226px;
+                        }
+
+                        input {
+                            transition: all 0.3s ease-in-out;
+                            font-size: 16px;
+                            @media (min-width: $md) {
+                                font-size: 22px;
+                            }
+                        }
+
+                        &:before {
+                            transition: all 0.3s ease-in-out;
+                            background: pink;
+                            width: 174px;
+                            height: 62px;
+                            @media (min-width: $md) {
+                                width: 244px;
+                                height: 86px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

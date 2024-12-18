@@ -1,0 +1,84 @@
+<div class="content has-loader">
+    <div class="inner">
+        <h1>Register</h1>
+        <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+
+        <form class="registerForm">
+            <div class="error-messages"><p>Error lorem Ipsum is simply dummy text</p></div>
+
+            <div class="group">
+                <label for="phone">NUMĂR TELEFON</label>
+                <input type="text" name="phone" id="phone" placeholder="Placeholder text" />
+            </div>
+
+            <div class="group select">
+                <label for="store">MAGAZIN</label>
+                <select name="store" id="store">
+                    <option value="" disabled selected hidden></option>
+                    <option value="auchan">Auchan</option>
+                    <option value="carrefour">Carrefour</option>
+                    <option value="cora">Cora</option>
+                    <option value="kaufland">Kaufland</option>
+                    <option value="mega">Mega Image</option>
+                    <option value="metro">Metro</option>
+                    <option value="penny">Penny</option>
+                    <option value="profi">Profi</option>
+                    <option value="selgros">Selgros</option>
+                    <option value="altele">Altele</option>
+                </select>
+                <div class="info-point">
+                    <img src="images/icon-dropdown.png" alt="icon" />
+                </div>
+            </div>
+
+            <div class="group">
+                <label for="receipt">NUMĂR BON FISCAL</label>
+                <input type="text" name="receipt" id="receipt" />
+                <div class="info-point">
+                    <a href="#" class="info-receipt">
+                        <img src="images/icon-info.png" alt="icon" />
+                    </a>
+
+                    <div class="receipt-img">
+                        <img class="receipt-image" src="images/bonuri/Kaufland.png" alt="auchan" width="323" height="631" />
+                        <a class="close-modal">
+                            <img src="images/icon-close.png" alt="icon" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group date-group">
+                <label for="date">DATĂ BON FISCAL</label>
+                <input type="text" name="date" id="date" class="datepicker" readonly="readonly" />
+                <!-- <div class="info-point">
+                    <img src="images/icon-calendar.png" alt="icon" />
+                </div> -->
+            </div>
+
+            <div class="group group-checkbox">
+                <input type="checkbox" name="accordAge" id="accordAge" />
+                <label for="accordAge">Declar că am peste 18 ani</label>
+            </div>
+
+            <div class="group group-checkbox">
+                <input type="checkbox" name="accordTerms" id="accordTerms" />
+                <label for="accordTerms">Am citit și sunt de acord cu <a href="/terms.html">Termenii și condițiile</a></label>
+            </div>
+
+            <div class="group group-checkbox">
+                <input type="checkbox" name="accordRules" id="accordRules" />
+                <label for="accordRules">Am citit și sunt de acord cu <a href="/rules.html">REGULAMENTUL</a> campaniei</label>
+            </div>
+
+            <div class="recaptcha-wrapper">
+                <!-- data-sitekey trebuie schimbat cu cel corect -->
+                <div id="g-recaptcha" class="g-recaptcha recaptcha" data-sitekey="6LeuQ5MmAAAAACOFlsg5rGP1KJkzFPIw8tt4Xgjm"></div>
+            </div>
+
+            <div class="group-submit">
+                <input type="submit" value="TRIMITE" />
+            </div>
+        </form>
+    </div>
+</div>

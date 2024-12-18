@@ -1,0 +1,25 @@
+{% extends "partials/layout.html" %} {% block content %}
+
+<!-- start:: Header -->
+{% include "partials/common/header.html" %}
+<!-- end:: Header -->
+
+<main class="register">
+    <!-- start:: Content -->
+    {% include "partials/register/content.html" %}
+    <!-- end:: Content -->
+     
+    <!-- start:: Receipt Modal -->
+    {% include "partials/common/receipt-modal.html" %}
+    <!-- end:: Receipt Modal -->
+
+    <!-- start:: Message Modal -->
+    {% include "partials/common/message-modal.html" %}
+    <!-- end:: Message Modal -->
+</main>
+
+<!-- start:: Footer -->
+{% include "partials/common/footer.html" %}
+<!-- end:: Footer -->
+
+{% endblock %}

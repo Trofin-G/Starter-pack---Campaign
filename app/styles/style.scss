@@ -1,0 +1,11 @@
+// Utilities
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "utils/utils";
+
+// Common
+@import "common/common";
+
+// Pages
+@import "homepage/homepage";
+@import "register/register";
+@import "legal/legal";
